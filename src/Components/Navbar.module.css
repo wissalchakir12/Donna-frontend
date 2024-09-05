@@ -1,0 +1,94 @@
+/* Barre de navigation transparente */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(231, 231, 231); /* Transparente */
+ 
+  padding: 10px 25px;
+  position: relative;
+  z-index: 101; /* Assurez-vous qu'elle est au-dessus du menu */
+}
+
+
+
+.hamburger, .closeButton {
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 102; /* Assurez-vous que les boutons sont au-dessus du menu */
+}
+
+.closeButton {
+  display: block;
+  position: relative;
+}
+
+.logo img {
+  border-radius: 100%;
+  width: 90px;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+}
+
+.navLink {
+  color:  #8B5E3C;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+.navLink:hover {
+  color: #6F4E37; /* Garde la même couleur au survol */
+ 
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 102;
+}
+
+/* Styles réactifs */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 100%;
+   background-color: rgba(243, 237, 225, 0.95); /* Ajuster l'opacité pour mobile */
+    border-radius: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .items.open {
+    display: flex;
+  }
+
+  .navLink {
+    padding: 10px 20px;
+     text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 102;
+  }
+}

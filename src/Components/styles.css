@@ -1,0 +1,61 @@
+.welcome-message {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 150px;
+  margin-left: 600px;
+  color: #8B5E3C; /* Ajustez la couleur du texte */
+
+}
+/*Pour le afterWelcome*/
+/* styles.css */
+/* Par défaut, le texte est centré pour les petits écrans */
+.text-container {
+  width: 100%;
+  max-width: 500px;
+  font-weight:bold;
+  font-size: 13px;
+  color: black;
+  text-align: left; /* Texte centré par défaut */
+}
+
+/* Pour les écrans larges (plus de 768px), on aligne à gauche */
+@media (min-width: 768px) {
+  .text-container {
+    text-align: left; 
+    font-size: 22px;/* Aligner à gauche pour les grands écrans */
+  }
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+  max-width: 150px;
+}
+
+.icon-container img {
+  width: 80px;
+  margin-bottom: 10px; /* Space between the image and the text */
+}
+
+.icon-container div {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+/* Styles réactifs */
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto; /* Centre le texte horizontalement */
+    color: #8B5E3C; /* Ajustez la couleur du texte */
+    width: fit-content; /* S'assure que la largeur s'adapte au contenu */
+  }
+}
+
