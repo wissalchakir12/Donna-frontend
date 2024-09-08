@@ -1,0 +1,51 @@
+/* Définition de l'animation */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Application de l'animation au titre et au texte */
+  .aboutUsTitle, .aboutUsText {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Styles par défaut pour les écrans plus grands */
+  .aboutUsTitle {
+    font-size: 3vw;
+    line-height: 1.2;
+  }
+  
+  .aboutUsText {
+    font-size: 1.2rem;
+    line-height: 2.5;
+    text-align: left;
+    font-style: italic;
+  }
+  
+  /* Styles pour les écrans plus petits */
+  @media (max-width: 768px) {
+    .aboutUsTitle {
+      font-size: 5vw;
+    }
+  
+    .aboutUsText {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  
+    .aboutUsSection {
+      padding: 20px 10px;
+    }
+  
+    .aboutUsImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

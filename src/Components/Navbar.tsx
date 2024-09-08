@@ -23,9 +23,9 @@ const Navbar = () => {
         </a>
       </div>
       <div style={{gap:'20px'}} className={`${styles.items} ${isOpen ? styles.open : ''}`}>
-        <a href="#" style={{marginRight:'20px'}} className={styles.navLink} onClick={closeMenu}>Accueil</a>
+        <a href="/" style={{marginRight:'20px'}} className={styles.navLink} onClick={closeMenu}>Accueil</a>
         <a href="#" style={{marginRight:'30px'}}  className={styles.navLink} onClick={closeMenu}>Boutique</a>
-        <a href="#"  style={{marginRight:'40px'}} className={styles.navLink} onClick={closeMenu}>A propos de nous</a>
+        <a href="/AboutUs"  style={{marginRight:'40px'}} className={styles.navLink} onClick={closeMenu}>A propos de nous</a>
         <a href="#" style={{marginRight:'50px'}} className={styles.navLink} onClick={closeMenu}>Contactez-nous</a>
       </div>
       <div className={styles.hamburger} onClick={toggleMenu}>

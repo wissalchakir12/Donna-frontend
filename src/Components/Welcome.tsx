@@ -46,7 +46,7 @@ const WelcomeMessage: React.FC = () => {
       <div >Bienvenue !</div> 
       <div style={{marginTop:'15px'}}>Découvrez l'élégance intemporelle avec <span style={{color:'#AAB396'}}>Donna Elegante.</span> </div>
       <div style={{display:'flex', flexDirection:'row'}}>
-      <a><button className="boutique-button">Shop now</button></a>
+      <a href='#'><button className="boutique-button">Shop now</button></a>
      
       <div style={{marginLeft:'150px',marginTop:'10px'}}>  
         
