@@ -11,6 +11,6 @@ export const Home = () => {
     <ImageBackground/>
     <AfterWelcome/>
     </>
-   
+  
   )
 }

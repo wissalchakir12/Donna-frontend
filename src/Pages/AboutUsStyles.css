@@ -15,8 +15,47 @@
     animation: fadeInUp 1s ease-out;
   }
   
-  /* Styles par défaut pour les écrans plus grands */
+  /* Styles par défaut */
+  .aboutUsContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .aboutUsContent {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    min-height: 0;
+  }
+  
+  .aboutUsImage {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .aboutUsImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .aboutUsSection {
+    flex: 1;
+    background-color: rgba(201, 215, 221, 0.5);
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .aboutUsTitle {
+    font-weight: bold;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    text-align: center;
     font-size: 3vw;
     line-height: 1.2;
   }
@@ -24,12 +63,26 @@
   .aboutUsText {
     font-size: 1.2rem;
     line-height: 2.5;
-    text-align: left;
+    text-align: center; /* Centrer le texte sur les petits écrans */
     font-style: italic;
   }
   
   /* Styles pour les écrans plus petits */
   @media (max-width: 768px) {
+    .aboutUsContent {
+      flex-direction: column;
+    }
+  
+    .aboutUsImage {
+      width: 100%;
+      height: auto;
+    }
+  
+    .aboutUsSection {
+      padding: 20px 10px;
+      width: 100%;
+    }
+  
     .aboutUsTitle {
       font-size: 5vw;
     }
@@ -37,15 +90,7 @@
     .aboutUsText {
       font-size: 1rem;
       line-height: 1.8;
-    }
-  
-    .aboutUsSection {
-      padding: 20px 10px;
-    }
-  
-    .aboutUsImage {
-      width: 100%;
-      height: auto;
+      text-align: center; /* Centrer le texte sur les petits écrans */
     }
   }
   

@@ -6,23 +6,14 @@ import './styles.css'; // Import the CSS file
 
 export const AfterWelcome = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '50px 20px',
-      }}
-    >
+    <div className="after-welcome-container">
       <div className="text-container">
         Donna Elegante...
         <div style={{ marginTop: '20px' }}>
           Nos vêtements de qualité, un style unique pour vous, avec un service incomparable et satisfaisant.
         </div>
       </div>
-      <div style={{width:'350px'}}></div>
-      <div style={{ display: 'flex', flexDirection: 'row',  justifyContent: 'center' }}>
+      <div className="icons-wrapper">
         <div className="icon-container">
           <img src={kamio} alt="Kamio" />
           <div>Livraison rapide dans tout le Maroc</div>

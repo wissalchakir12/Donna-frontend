@@ -1,61 +1,161 @@
+/* WelcomeMessage Styles */
 .welcome-message {
   font-size: 3rem;
   font-weight: bold;
-  text-align: left;
-  padding-top: 150px;
-  margin-left: 600px;
-  color: #8B5E3C; /* Ajustez la couleur du texte */
-
+  text-align: center;
+  padding: 100px 20px;
+  color: #8B5E3C;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
 }
-/*Pour le afterWelcome*/
-/* styles.css */
-/* Par défaut, le texte est centré pour les petits écrans */
+
+.action-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boutique-button {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #AAB396;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.boutique-button:hover {
+  background-color: #AAB396;
+  color: white;
+}
+
+/* AfterWelcome Styles */
+.after-welcome-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .text-container {
   width: 100%;
   max-width: 500px;
-  font-weight:bold;
-  font-size: 13px;
+  font-weight: bold;
+  font-size: 16px;
   color: black;
-  text-align: left; /* Texte centré par défaut */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Pour les écrans larges (plus de 768px), on aligne à gauche */
-@media (min-width: 768px) {
-  .text-container {
-    text-align: left; 
-    font-size: 22px;/* Aligner à gauche pour les grands écrans */
-  }
+.icons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
 }
 
 .icon-container {
   display: flex;
   flex-direction: column;
-  margin: 20px;
   align-items: center;
+  text-align: center;
   max-width: 150px;
+  margin: 10px;
 }
 
 .icon-container img {
   width: 80px;
-  margin-bottom: 10px; /* Space between the image and the text */
+  margin-bottom: 10px;
+  max-width: 100%;
 }
 
 .icon-container div {
   font-weight: bold;
-  text-align: center;
 }
 
-
-
-/* Styles réactifs */
-@media (max-width: 768px) {
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
   .welcome-message {
     font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 auto; /* Centre le texte horizontalement */
-    color: #8B5E3C; /* Ajustez la couleur du texte */
-    width: fit-content; /* S'assure que la largeur s'adapte au contenu */
+    text-align: left;
+    max-width: 800px;
+  }
+
+  .action-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .after-welcome-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .icons-wrapper {
+    flex-direction: row;
   }
 }
 
+@media (min-width: 1200px) {
+  .welcome-message {
+    text-align: left; /* Aligner à gauche pour mieux voir le décalage */
+    margin-left: 550px; /* Décalage vers la droite */
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 2rem;
+    padding: 50px 10px;
+  }
+
+  .action-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .social-links {
+    margin-top: 10px;
+  }
+
+  .after-welcome-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .icons-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-container {
+    max-width: 200px;
+  }
+}
