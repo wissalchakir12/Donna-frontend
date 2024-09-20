@@ -1,0 +1,91 @@
+/* Container principal xoxo */
+.panier-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Contenu du panier xoxo*/
+  .panier-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /*le message du panier*/
+  .WelcomePanier{
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Ligne total : Total et 500 DH xoxox*/
+  .total-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style de la classe total-price xoxoxox*/
+  .total-price {
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  /*Le lien du button */
+  
+  /* Bouton commander xoxo*/
+  .btn-commander {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #AEC09A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-commander:hover {
+    background-color: #778D45;
+  }
+  
+  /* Responsivité pour les petits écrans UwU*/
+  @media (max-width: 768px) {
+    .total-price {
+      font-size: 20px;
+    }
+  
+    .btn-commander {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .panier-container{
+        width: 100vw;
+    }
+  }
+
+  
+  /* Responsivité pour les très petits écrans (mobile) */
+  @media (max-width: 480px) {
+    .total-price {
+      font-size: 18px;
+    }
+  
+    .btn-commander {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .panier-container {
+      padding: 10px;
+      width: 100vw;
+    }
+    
+  }
+  

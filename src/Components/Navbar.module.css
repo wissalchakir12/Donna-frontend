@@ -55,7 +55,7 @@
 }
 
 /* Styles réactifs */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
@@ -81,7 +81,7 @@
 
   .navLink {
     padding: 10px 20px;
-     text-align: center;
+    text-align: center;
     width: 100%;
     display: block;
   }

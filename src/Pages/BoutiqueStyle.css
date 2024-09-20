@@ -1,0 +1,33 @@
+/* Styles de base pour les écrans plus grands */
+.products {
+  flex: 1 1 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 0.1rem; 
+}
+
+.panier {
+  flex: 1 1 30%;
+  padding: 10px;
+  background-color: rgb(231, 231, 231);
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .products {
+    flex: 1 1 100%;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1rem; 
+    overflow: hidden; /* Empêche le défilement horizontal */
+  }
+
+  .panier {
+    flex: 1 1 100%; 
+    border-radius: 0; 
+    width: 100%;
+    box-sizing: border-box; 
+    overflow: hidden; /* Assure que le panier ne déborde pas */
+  }
+}

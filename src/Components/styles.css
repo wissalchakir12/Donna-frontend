@@ -92,6 +92,27 @@
   font-weight: bold;
 }
 
+
+/*Pour le button du panier*/
+
+
+/* Responsivité pour les très petits écrans (mobile) */
+@media (max-width: 480px) {
+  .total-price {
+    font-size: 18px;
+  }
+
+  .btn-commander {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .panier-container {
+    padding: 10px;
+  }
+}
+
+
 /* Media Queries for Responsiveness */
 @media (min-width: 768px) {
   .welcome-message {
