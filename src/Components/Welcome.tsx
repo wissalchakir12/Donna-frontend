@@ -49,16 +49,18 @@ const WelcomeMessage: React.FC = () => {
           Découvrez l'élégance intemporelle avec <span style={{ color: '#AAB396' }}>Donna Elegante.</span>
         </div>
         <div className="action-container">
-          <a href='#'>
+          <a href='/Boutique'>
             <button className="boutique-button">Shop now</button>
           </a>
           <div className="social-links">
             <a href='https://www.instagram.com/donnaelegante1?igsh=MWFmMWF4YXh2aWJzeA==' className='me-4 text-reset'>
               <MDBIcon fab icon="instagram" />
             </a>
-            <a href='#' className='me-4 text-reset'>
-              <MDBIcon fab icon="whatsapp" />
-            </a>
+                <a href="https://wa.me/212764019413?text=Bonjour!" target="_blank" rel="noopener noreferrer" className='me-4 text-reset'> 
+                  <MDBIcon fab icon="whatsapp" />
+                </a>
+
+
           </div>
         </div>
       </motion.div>

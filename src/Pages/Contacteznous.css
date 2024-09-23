@@ -1,0 +1,113 @@
+.Contact {
+    position: relative; /* Position relative pour l'overlay */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh; 
+    text-align: center; 
+    background-image: url('/src/assets/contact.jpg'); /* Chemin vers l'image */
+    background-size: cover; /* L'image couvre toute la div */
+    background-position: center; /* L'image est centrée */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+}
+/*lumi chatgpt thank u xoxox*/
+
+.txt {
+    font-family: 'Cursive';
+    font-style: italic;
+    font-size: 3.5vw;
+    margin-top: 5vh;
+    color: black; /* Utiliser le blanc */
+    animation: slideIn 1s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.txt2 {
+    font-family: 'Cursive';
+    font-style: italic;
+    font-size: 2vw;
+    margin-top: 5vh;
+    color: black; /* Utiliser un gris clair */
+    animation: slideIn 1s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.wtsp{
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    border-bottom: solid 1px ;
+}
+.mail{
+    margin-top: 6vh;
+    
+}
+.insta{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6vh;
+    border-bottom: solid 1px;
+    height: 9vh;
+}
+.cadre {
+    margin-top: 80px; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #EDE8DC;
+    opacity: 0; /* Initialement invisible */
+    transform: translateY(20px); /* Position initiale */
+    animation: fadeInUp 0.5s forwards; /* Appliquer l'animation */
+}
+body {
+    overflow-x: hidden; /* Masquer le défilement horizontal */
+}
+
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Invisible au début */
+        transform: translateY(20px); /* Commence en bas */
+    }
+    100% {
+        opacity: 1; /* Devenir visible */
+        transform: translateY(0); /* Retour à la position normale */
+    }
+}
+
+/*Pour l'animation*/
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Invisible at the start */
+        transform: translateY(20px); /* Start from below */
+    }
+    100% {
+        opacity: 1; /* Fully visible at the end */
+        transform: translateY(0); /* Return to normal position */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .txt {
+        font-size: 6vw; 
+    }
+}
+
+@media (max-width: 480px) {
+    .txt {
+        font-size: 8vw; 
+    }
+}
+@media (max-width: 480px) {
+    .Contact {
+        overflow-y: hidden; /* Masquer le défilement vertical sur les petits écrans */
+        height: 100vh; /* Gardez la hauteur de la div pour éviter le défilement */
+    }
+}
+
+

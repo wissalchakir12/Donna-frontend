@@ -1,91 +1,205 @@
-/* Container principal xoxo */
+/* Container principal */
 .panier-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Contenu du panier */
+.panier-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Liste des éléments dans le panier */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto; 
+  max-height: 500px;
+  padding-top: 13px;
+}
+
+.cart-items-list::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 5px;
+}
+
+.cart-items-list::-webkit-scrollbar-track {
+  background-color: rgb(210, 219, 195);
+}
+
+.cart-items-list::-webkit-scrollbar-thumb {
+  background-color: #AEC09A;
+  border-radius: 5px;
+}
+
+/* Éléments individuels du panier */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.itemName {
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.itemPrice {
+  font-size: 18px;
+  padding-top: 9px;
+}
+
+.quantite {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonquantity {
+  display: flex;
+  background: white;
+  border: 1px solid white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: black;
+  height: fit-content;
+  padding: 5px;
+  justify-content: center;
+}
+
+.buttonquantity2 {
+  display: flex;
+  background: white;
+  border: 1px solid white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: black;
+  height: fit-content;
+  padding: 5px;
+  justify-content: center;
+}
+
+.cart-item-image {
+  width: 120px;
+  height: 90px;
+  margin-right: 15px;
+  border-radius: 18px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* Message d'accueil du panier */
+.WelcomePanier {
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: rgb(179, 145, 145);
+  animation: fadeIn 0.8s ease-in-out; /* Animation ajoutée */
+}
+
+/* Animation fadeIn pour le message "Panier est vide" */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
   }
-  
-  /* Contenu du panier xoxo*/
-  .panier-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  /*le message du panier*/
-  .WelcomePanier{
-    font-size: 25px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Ligne total : Total et 500 DH xoxox*/
-  .total-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  /* Style de la classe total-price xoxoxox*/
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
+.itemTotalPrice {
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+/* Total et bouton de commande en position absolue */
+.total-row {
+  position: absolute;
+  bottom: 80px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.total-price {
+  font-family: 'Nunito', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Bouton commander */
+.btn-commander {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #AEC09A;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-commander:hover {
+  background-color: #778D45;
+}
+
+/* Responsivité pour petits écrans */
+@media (max-width: 768px) {
   .total-price {
-    font-family: 'Nunito', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 20px;
   }
-  /*Le lien du button */
-  
-  /* Bouton commander xoxo*/
+
   .btn-commander {
-    padding: 12px;
-    border-radius: 12px;
-    background-color: #AEC09A;
-    color: white;
-    border: none;
-    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .panier-container {
+    width: 100vw;
+  }
+}
+
+/* Responsivité pour très petits écrans (mobile) */
+@media (max-width: 480px) {
+  .total-price {
     font-size: 18px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-commander:hover {
-    background-color: #778D45;
-  }
-  
-  /* Responsivité pour les petits écrans UwU*/
-  @media (max-width: 768px) {
-    .total-price {
-      font-size: 20px;
-    }
-  
-    .btn-commander {
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    .panier-container{
-        width: 100vw;
-    }
   }
 
-  
-  /* Responsivité pour les très petits écrans (mobile) */
-  @media (max-width: 480px) {
-    .total-price {
-      font-size: 18px;
-    }
-  
-    .btn-commander {
-      padding: 8px;
-      font-size: 14px;
-    }
-  
-    .panier-container {
-      padding: 10px;
-      width: 100vw;
-    }
-    
+  .btn-commander {
+    padding: 8px;
+    font-size: 14px;
   }
-  
+
+  .panier-container {
+    padding: 10px;
+    width: 100vw;
+  }
+}

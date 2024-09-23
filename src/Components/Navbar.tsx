@@ -26,7 +26,7 @@ const Navbar = () => {
         <a href="/" style={{marginRight:'20px'}} className={styles.navLink} onClick={closeMenu}>Accueil</a>
         <a href="/Boutique" style={{marginRight:'30px'}}  className={styles.navLink} onClick={closeMenu}>Boutique</a>
         <a href="/AboutUs"  style={{marginRight:'40px'}} className={styles.navLink} onClick={closeMenu}>A propos de nous</a>
-        <a href="#" style={{marginRight:'50px'}} className={styles.navLink} onClick={closeMenu}>Contactez-nous</a>
+        <a href="/Contacteznous" style={{marginRight:'50px'}} className={styles.navLink} onClick={closeMenu}>Contactez-nous</a>
       </div>
       <div className={styles.hamburger} onClick={toggleMenu}>
         <FaBars />

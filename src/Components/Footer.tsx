@@ -14,7 +14,7 @@ const App: React.FC = () => {
           <a href='https://www.instagram.com/donnaelegante1?igsh=MWFmMWF4YXh2aWJzeA== ' className='me-4 text-reset'>
             <MDBIcon fab icon="instagram" />
           </a>
-          <a href='#' className='me-4 text-reset'>
+          <a href="https://wa.me/212764019413?text=Bonjour!" target="_blank" rel="noopener noreferrer" className='me-4 text-reset'>
             <MDBIcon fab icon="whatsapp" />
           </a>
           
