@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contacteznous.css';
+import './Styles/Contacteznous.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faWhatsapp ,faInstagram  } from '@fortawesome/free-brands-svg-icons';

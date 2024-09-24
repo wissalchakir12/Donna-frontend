@@ -1,0 +1,11 @@
+input{
+    background-color: white;
+    border: 1 solid  #08491e;
+    height: 8.2mm;
+    box-shadow: none;
+    color: #08491e;
+}
+
+.box{
+    margin: 3rem;
+}

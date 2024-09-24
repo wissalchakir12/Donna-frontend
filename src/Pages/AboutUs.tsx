@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUsStyles.css'; // Assure-toi que le chemin vers le fichier CSS est correct
+import './Styles/AboutUsStyles.css'; // Assure-toi que le chemin vers le fichier CSS est correct
 
 export const AboutUs: React.FC = () => {
   return (

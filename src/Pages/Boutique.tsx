@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Component from '../Components/platCard2';
-import './BoutiqueStyle.css';
+import './Styles/BoutiqueStyle.css';
 import { Panier } from '../Components/Panier';
 
 interface Product {
