@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Panier.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketShopping, faAngleUp, faAngleDown, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom'; // Importez useNavigate pour la navigation
 
 interface Product {
   id: number;
@@ -24,24 +25,14 @@ export const Panier: React.FC<PanierProps> = ({ cartItems, setCartItems }) => {
     }, {} as { [key: number]: number })
   );
 
-  // Fonction pour ajouter un article au panier ou augmenter la quantité
-  const addToCart = (product: Product) => {
-    const existingProduct = cartItems.find(item => item.id === product.id);
+  const navigate = useNavigate(); // Hook pour la navigation
 
-    if (existingProduct) {
-      // Si le produit existe déjà, on augmente la quantité
-      const updatedCartItems = cartItems.map(item =>
-        item.id === product.id
-          ? { ...item, quantity: (item.quantity || 1) + 1 }
-          : item
-      );
-      setCartItems(updatedCartItems);
-      localStorage.setItem('panier', JSON.stringify(updatedCartItems));
+  // Fonction pour gérer le clic sur le bouton Commander
+  const handleCommanderClick = () => {
+    if (cartItems.length === 0) {
+      alert("Votre panier est vide. Ajoutez des articles avant de commander.");
     } else {
-      // Si le produit n'existe pas, on l'ajoute avec une quantité initiale de 1
-      const updatedCartItems = [...cartItems, { ...product, quantity: 1 }];
-      setCartItems(updatedCartItems);
-      localStorage.setItem('panier', JSON.stringify(updatedCartItems));
+      navigate('/Commande');
     }
   };
 
@@ -135,7 +126,7 @@ export const Panier: React.FC<PanierProps> = ({ cartItems, setCartItems }) => {
       )}
 
       <div className="part2">
-       <a href="/Commande"><button className="btn-commander">Commander</button></a> 
+        <button className="btn-commander" onClick={handleCommanderClick}>Commander</button>
       </div>
     </div>
   );
